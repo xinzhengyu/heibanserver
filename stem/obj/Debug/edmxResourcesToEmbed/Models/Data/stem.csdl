@@ -1,0 +1,504 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="stemModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="user">
+    <Key>
+      <PropertyRef Name="uid" />
+    </Key>
+    <Property Name="uid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="avator" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="ins_date" Type="DateTime" Nullable="false" />
+    <Property Name="dept_id" Type="Int32" />
+    <Property Name="role_id" Type="Int32" />
+    <Property Name="last_login_date" Type="DateTime" />
+    <Property Name="phone" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="disabled" Type="Boolean" />
+    <Property Name="last_login_ip" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="user_login">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="uid" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="password" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="type" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="ins_date" Type="DateTime" />
+  </EntityType>
+  <EntityContainer Name="stemEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="user" EntityType="Self.user" />
+    <EntitySet Name="user_login" EntityType="Self.user_login" />
+    <EntitySet Name="tables_common" EntityType="stemModel.tables_common" />
+    <EntitySet Name="user_auth" EntityType="stemModel.user_auth" />
+    <EntitySet Name="user_auth_type" EntityType="stemModel.user_auth_type" />
+    <EntitySet Name="language_type" EntityType="stemModel.language_type" />
+    <EntitySet Name="lesson" EntityType="stemModel.lesson" />
+    <EntitySet Name="product_status" EntityType="stemModel.product_status" />
+    <EntitySet Name="product_type" EntityType="stemModel.product_type" />
+    <EntitySet Name="shop" EntityType="stemModel.shop" />
+    <EntitySet Name="lessson_collect" EntityType="stemModel.lessson_collect" />
+    <EntitySet Name="product_collect" EntityType="stemModel.product_collect" />
+    <EntitySet Name="product_comment" EntityType="stemModel.product_comment" />
+    <EntitySet Name="product_size" EntityType="stemModel.product_size" />
+    <EntitySet Name="order" EntityType="stemModel.order" />
+    <EntitySet Name="order_every_status" EntityType="stemModel.order_every_status" />
+    <EntitySet Name="order_status" EntityType="stemModel.order_status" />
+    <EntitySet Name="product_shop_category" EntityType="stemModel.product_shop_category" />
+    <EntitySet Name="system_banner" EntityType="stemModel.system_banner" />
+    <EntitySet Name="lessons_menu" EntityType="stemModel.lessons_menu" />
+    <EntitySet Name="shop_status" EntityType="stemModel.shop_status" />
+    <EntitySet Name="shop_teachers" EntityType="stemModel.shop_teachers" />
+    <EntitySet Name="shop_type" EntityType="stemModel.shop_type" />
+    <EntitySet Name="lesson_video" EntityType="stemModel.lesson_video" />
+    <EntitySet Name="shops_teachers" EntityType="stemModel.shops_teachers" />
+    <EntitySet Name="lesson_comment" EntityType="stemModel.lesson_comment" />
+    <EntitySet Name="shops_banners" EntityType="stemModel.shops_banners" />
+    <EntitySet Name="shops_citys" EntityType="stemModel.shops_citys" />
+    <EntitySet Name="product" EntityType="stemModel.product" />
+    <EntitySet Name="chat_list" EntityType="stemModel.chat_list" />
+    <EntitySet Name="chat_msg" EntityType="stemModel.chat_msg" />
+    <EntitySet Name="lesson_copy" EntityType="stemModel.lesson_copy" />
+    <EntitySet Name="lesson_user" EntityType="stemModel.lesson_user" />
+  </EntityContainer>
+  <EntityType Name="tables_common">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="table_name" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="ins_date" Type="DateTime" Nullable="false" />
+    <Property Name="is_use" Type="Boolean" Nullable="false" />
+    <Property Name="is_show" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="shunxu" Type="Int32" />
+    <Property Name="pre_id" Type="Int32" />
+    <Property Name="router" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="icon" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="is_year" Type="Int32" />
+    <Property Name="quanxian" Type="Int32" />
+  </EntityType>
+  <EntityType Name="user_auth">
+    <Key>
+      <PropertyRef Name="uid" />
+    </Key>
+    <Property Name="uid" Type="Int32" Nullable="false" />
+    <Property Name="realname" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="cardz" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="cardf" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="ins_date" Type="DateTime" />
+    <Property Name="last_change_date" Type="DateTime" />
+    <Property Name="phone" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="status" Type="Int32" />
+    <Property Name="error" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="user_auth_type">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="icon" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="language_type">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="icon" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="is_soft" Type="Boolean" />
+    <Property Name="beizhu" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="shunxu" Type="Int32" />
+    <Property Name="num" Type="Int32" />
+    <Property Name="type" Type="Int32" />
+  </EntityType>
+  <EntityType Name="lesson">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="desc" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="language_id" Type="Int32" />
+    <Property Name="image" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="uid" Type="Int32" />
+    <Property Name="ins_date" Type="DateTime" />
+    <Property Name="last_change_date" Type="DateTime" />
+    <Property Name="age_min" Type="Int32" />
+    <Property Name="age_max" Type="Int32" />
+    <Property Name="tag" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="jigou" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="is_xilie" Type="Boolean" />
+    <Property Name="shop_id" Type="Int32" />
+    <Property Name="teachers" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" />
+    <Property Name="num" Type="Int32" />
+    <Property Name="price" Type="Double" />
+    <Property Name="content" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" />
+    <Property Name="month_num" Type="Int32" />
+  </EntityType>
+  <EntityType Name="product_status">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="orderby" Type="Int32" />
+  </EntityType>
+  <EntityType Name="product_type">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="icon" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="orderby" Type="Int32" />
+  </EntityType>
+  <EntityType Name="shop">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="card" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="fuzeren_uid" Type="Int32" />
+    <Property Name="ins_date" Type="DateTime" />
+    <Property Name="jianjie" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="logo" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="banner" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="type" Type="Int32" />
+    <Property Name="change_date" Type="DateTime" />
+    <Property Name="status" Type="Int32" />
+  </EntityType>
+  <EntityType Name="lessson_collect">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="lessonid" Type="Int32" Nullable="false" />
+    <Property Name="uid" Type="Int32" Nullable="false" />
+    <Property Name="ins_date" Type="DateTime" />
+    <Property Name="qu_date" Type="DateTime" />
+    <Property Name="is_zan" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="product_collect">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="product_id" Type="Int32" Nullable="false" />
+    <Property Name="uid" Type="Int32" Nullable="false" />
+    <Property Name="ins_date" Type="DateTime" />
+    <Property Name="qu_date" Type="DateTime" />
+    <Property Name="is_zan" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="product_comment">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="product_id" Type="Int32" Nullable="false" />
+    <Property Name="uid" Type="Int32" Nullable="false" />
+    <Property Name="is_niming" Type="Boolean" />
+    <Property Name="ins_date" Type="DateTime" />
+    <Property Name="order_id" Type="Int32" />
+    <Property Name="toid" Type="Int32" />
+    <Property Name="pre_id" Type="Int32" />
+    <Property Name="first_star" Type="Double" />
+    <Property Name="second_star" Type="Double" />
+    <Property Name="third_star" Type="Double" />
+    <Property Name="desc" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="imglist" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="product_size">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="product_id" Type="Int32" Nullable="false" />
+    <Property Name="ins_date" Type="DateTime" Nullable="false" />
+    <Property Name="beizhu" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="image" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="price" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="num" Type="Int32" />
+    <Property Name="sale_num" Type="Int32" />
+  </EntityType>
+  <EntityType Name="order">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="orderid" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="address" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="shop_name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="shop_id" Type="Int32" />
+    <Property Name="uid" Type="Int32" />
+    <Property Name="price" Type="Decimal" />
+    <Property Name="status" Type="Int32" />
+    <Property Name="insert_time" Type="DateTime" />
+    <Property Name="phone" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="express" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" />
+    <Property Name="ip" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="products" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" />
+    <Property Name="pay_time" Type="DateTime" />
+    <Property Name="use_time" Type="DateTime" />
+    <Property Name="pay_type" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="params" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="remarks" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="order_every_status">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="status" Type="Int32" Nullable="false" />
+    <Property Name="orderid" Type="Int32" Nullable="false" />
+    <Property Name="ins_date" Type="DateTime" Nullable="false" />
+    <Property Name="desc" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="order_status">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="icon" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="orderby" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="product_shop_category">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="pre_id" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="uid" Type="Int32" />
+    <Property Name="orderby" Type="Int32" />
+    <Property Name="ins_date" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="system_banner">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="url" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="image" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="ins_date" Type="DateTime" />
+    <Property Name="title" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="orderby" Type="Int32" />
+    <Property Name="color" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="kw" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="lessons_menu">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="lesson_id" Type="Int32" />
+    <Property Name="pre_id" Type="Int32" />
+    <Property Name="title" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="orderby" Type="Int32" />
+    <Property Name="ins_date" Type="DateTime" />
+    <Property Name="is_free" Type="Boolean" />
+    <Property Name="price" Type="Double" />
+    <Property Name="product_id" Type="Int32" />
+    <Property Name="time" Type="Int32" />
+    <Property Name="type" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="shop_status">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="orderby" Type="Int32" Nullable="false" />
+    <Property Name="icon" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="shop_teachers">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="jianjie" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="avator" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="type" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="shop_id" Type="Int32" />
+    <Property Name="status" Type="Int32" />
+    <Property Name="card" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="card1" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="phone" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="shop_type">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="icon" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="orderby" Type="Int32" />
+  </EntityType>
+  <EntityType Name="lesson_video">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="uid" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="url" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="ins_date" Type="DateTime" />
+    <Property Name="size" Type="Double" />
+    <Property Name="shop" Type="Int32" />
+  </EntityType>
+  <EntityType Name="shops_teachers">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="shop_id" Type="Int32" Nullable="false" />
+    <Property Name="ins_date" Type="DateTime" />
+    <Property Name="birth" Type="DateTime" />
+    <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="school" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="desc" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+    <Property Name="type" Type="Int32" />
+    <Property Name="image" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="zmcard" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="lesson_comment">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="desc" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="imglist" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="is_niming" Type="Boolean" Nullable="false" />
+    <Property Name="uid" Type="Int32" />
+    <Property Name="lesson_id" Type="Int32" Nullable="false" />
+    <Property Name="pre_id" Type="Int32" Nullable="false" />
+    <Property Name="order_id" Type="Int32" />
+    <Property Name="toid" Type="Int32" />
+    <Property Name="ins_date" Type="DateTime" />
+    <Property Name="first_star" Type="Double" />
+    <Property Name="second_star" Type="Double" />
+    <Property Name="third_star" Type="Double" />
+    <Property Name="uname" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="toname" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="shops_banners">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="image" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="url" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="orderby" Type="Int32" />
+    <Property Name="shop_id" Type="Int32" Nullable="false" />
+    <Property Name="title" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="shops_citys">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="lat" Type="Double" />
+    <Property Name="lng" Type="Double" />
+    <Property Name="address" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="avator" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="city" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="shop_id" Type="Int32" />
+  </EntityType>
+  <EntityType Name="product">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="title" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="sub_title" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="uid" Type="Int32" />
+    <Property Name="language_type" Type="Int32" />
+    <Property Name="ins_date" Type="DateTime" />
+    <Property Name="old_mini" Type="Int32" />
+    <Property Name="old_max" Type="Int32" />
+    <Property Name="image" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="video" Type="Int32" />
+    <Property Name="pdf" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="codezip" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="type" Type="Int32" />
+    <Property Name="price" Type="Double" />
+    <Property Name="status" Type="Int32" />
+    <Property Name="starttime" Type="DateTime" />
+    <Property Name="endtime" Type="DateTime" />
+    <Property Name="is_free" Type="Boolean" />
+    <Property Name="num" Type="Int32" />
+    <Property Name="orderby" Type="Int32" />
+    <Property Name="sale_num" Type="Int32" />
+    <Property Name="spcode" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="lessonid" Type="Int32" />
+    <Property Name="imglist" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+    <Property Name="computer_detail" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" />
+    <Property Name="phone_detail" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" />
+    <Property Name="guanlian_product" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="chat_list">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="toid" Type="Int32" Nullable="false" />
+    <Property Name="uid" Type="Int32" Nullable="false" />
+    <Property Name="no_read_num" Type="Int32" Nullable="false" />
+    <Property Name="is_show" Type="Boolean" Nullable="false" />
+    <Property Name="last_time" Type="DateTime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="chat_msg">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="uid" Type="Int32" Nullable="false" />
+    <Property Name="toid" Type="Int32" Nullable="false" />
+    <Property Name="msg" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="ins_date" Type="DateTime" />
+    <Property Name="is_read" Type="Int32" />
+    <Property Name="is_show" Type="Boolean" />
+    <Property Name="type" Type="Int32" />
+  </EntityType>
+  <EntityType Name="lesson_copy">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="desc" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="language_id" Type="Int32" />
+    <Property Name="image" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="uid" Type="Int32" />
+    <Property Name="ins_date" Type="DateTime" />
+    <Property Name="last_change_date" Type="DateTime" />
+    <Property Name="age_min" Type="Int32" />
+    <Property Name="age_max" Type="Int32" />
+    <Property Name="tag" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="jigou" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="is_xilie" Type="Boolean" />
+    <Property Name="shop_id" Type="Int32" />
+    <Property Name="teachers" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" />
+    <Property Name="num" Type="Int32" />
+    <Property Name="price" Type="Double" />
+    <Property Name="content" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" />
+    <Property Name="month_num" Type="Int32" />
+  </EntityType>
+  <EntityType Name="lesson_user">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="lessonid" Type="Int32" Nullable="false" />
+    <Property Name="uid" Type="Int32" Nullable="false" />
+    <Property Name="ins_date" Type="DateTime" Nullable="false" />
+    <Property Name="is_study" Type="Boolean" />
+    <Property Name="records" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>

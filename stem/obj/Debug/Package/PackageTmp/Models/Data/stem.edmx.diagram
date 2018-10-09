@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="0002fe788ec2461c890fb02589cbf952" Name="Diagram1">
+        <EntityTypeShape EntityType="stemModel.user" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="stemModel.user_login" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="stemModel.tables_common" Width="1.5" PointX="3.375" PointY="4.75" />
+        <EntityTypeShape EntityType="stemModel.user_auth" Width="1.5" PointX="5.375" PointY="0.75" />
+        <EntityTypeShape EntityType="stemModel.user_auth_type" Width="1.5" PointX="5.375" PointY="4.75" />
+        <EntityTypeShape EntityType="stemModel.language_type" Width="1.5" PointX="0.75" PointY="6.75" />
+        <EntityTypeShape EntityType="stemModel.lesson" Width="1.5" PointX="7.75" PointY="0.75" />
+        <EntityTypeShape EntityType="stemModel.product_status" Width="1.5" PointX="2.75" PointY="8.75" />
+        <EntityTypeShape EntityType="stemModel.product_type" Width="1.5" PointX="4.75" PointY="8.75" />
+        <EntityTypeShape EntityType="stemModel.shop" Width="1.5" PointX="9.75" PointY="0.75" />
+        <EntityTypeShape EntityType="stemModel.lessson_collect" Width="1.5" PointX="10.75" PointY="3.75" />
+        <EntityTypeShape EntityType="stemModel.product_collect" Width="1.5" PointX="10.75" PointY="6.75" />
+        <EntityTypeShape EntityType="stemModel.product_comment" Width="1.5" PointX="10.75" PointY="9.75" />
+        <EntityTypeShape EntityType="stemModel.product_size" Width="1.5" PointX="0.75" PointY="11.75" />
+        <EntityTypeShape EntityType="stemModel.order" Width="1.5" PointX="3.375" PointY="11.75" />
+        <EntityTypeShape EntityType="stemModel.order_every_status" Width="1.5" PointX="5.375" PointY="11.75" />
+        <EntityTypeShape EntityType="stemModel.order_status" Width="1.5" PointX="7.375" PointY="11.75" />
+        <EntityTypeShape EntityType="stemModel.product_shop_category" Width="1.5" PointX="12.375" PointY="0.75" />
+        <EntityTypeShape EntityType="stemModel.system_banner" Width="1.5" PointX="13.375" PointY="3.75" />
+        <EntityTypeShape EntityType="stemModel.lessons_menu" Width="1.5" PointX="13.375" PointY="6.75" />
+        <EntityTypeShape EntityType="stemModel.shop_status" Width="1.5" PointX="13.375" PointY="10.75" />
+        <EntityTypeShape EntityType="stemModel.shop_teachers" Width="1.5" PointX="13.375" PointY="13.75" />
+        <EntityTypeShape EntityType="stemModel.shop_type" Width="1.5" PointX="14.375" PointY="0.75" />
+        <EntityTypeShape EntityType="stemModel.lesson_video" Width="1.5" PointX="5.375" PointY="14.75" />
+        <EntityTypeShape EntityType="stemModel.shops_teachers" Width="1.5" PointX="7.375" PointY="14.75" />
+        <EntityTypeShape EntityType="stemModel.lesson_comment" Width="1.5" PointX="9.375" PointY="14.75" />
+        <EntityTypeShape EntityType="stemModel.shops_banners" Width="1.5" PointX="0.75" PointY="15.75" />
+        <EntityTypeShape EntityType="stemModel.shops_citys" Width="1.5" PointX="15.375" PointY="3.75" />
+        <EntityTypeShape EntityType="stemModel.product" Width="1.5" PointX="15.375" PointY="7.75" />
+        <EntityTypeShape EntityType="stemModel.chat_list" Width="1.5" PointX="7.375" PointY="6.75" />
+        <EntityTypeShape EntityType="stemModel.chat_msg" Width="1.5" PointX="15.375" PointY="14.75" />
+        <EntityTypeShape EntityType="stemModel.lesson_copy" Width="1.5" PointX="17.375" PointY="0.75" />
+        <EntityTypeShape EntityType="stemModel.lesson_user" Width="1.5" PointX="17.375" PointY="6.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

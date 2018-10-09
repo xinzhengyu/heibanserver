@@ -1,0 +1,504 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="stemModelStoreContainer" CdmEntityContainer="stemEntities">
+    <EntitySetMapping Name="user">
+      <EntityTypeMapping TypeName="stemModel.user">
+        <MappingFragment StoreEntitySet="user">
+          <ScalarProperty Name="last_login_ip" ColumnName="last_login_ip" />
+          <ScalarProperty Name="disabled" ColumnName="disabled" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="last_login_date" ColumnName="last_login_date" />
+          <ScalarProperty Name="uid" ColumnName="uid" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="avator" ColumnName="avator" />
+          <ScalarProperty Name="ins_date" ColumnName="ins_date" />
+          <ScalarProperty Name="dept_id" ColumnName="dept_id" />
+          <ScalarProperty Name="role_id" ColumnName="role_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="user_login">
+      <EntityTypeMapping TypeName="stemModel.user_login">
+        <MappingFragment StoreEntitySet="user_login">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="uid" ColumnName="uid" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="ins_date" ColumnName="ins_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tables_common">
+      <EntityTypeMapping TypeName="stemModel.tables_common">
+        <MappingFragment StoreEntitySet="tables_common">
+          <ScalarProperty Name="quanxian" ColumnName="quanxian" />
+          <ScalarProperty Name="is_year" ColumnName="is_year" />
+          <ScalarProperty Name="icon" ColumnName="icon" />
+          <ScalarProperty Name="router" ColumnName="router" />
+          <ScalarProperty Name="pre_id" ColumnName="pre_id" />
+          <ScalarProperty Name="shunxu" ColumnName="shunxu" />
+          <ScalarProperty Name="is_show" ColumnName="is_show" />
+          <ScalarProperty Name="is_use" ColumnName="is_use" />
+          <ScalarProperty Name="ins_date" ColumnName="ins_date" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="table_name" ColumnName="table_name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="user_auth">
+      <EntityTypeMapping TypeName="stemModel.user_auth">
+        <MappingFragment StoreEntitySet="user_auth">
+          <ScalarProperty Name="error" ColumnName="error" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="last_change_date" ColumnName="last_change_date" />
+          <ScalarProperty Name="ins_date" ColumnName="ins_date" />
+          <ScalarProperty Name="cardf" ColumnName="cardf" />
+          <ScalarProperty Name="cardz" ColumnName="cardz" />
+          <ScalarProperty Name="realname" ColumnName="realname" />
+          <ScalarProperty Name="uid" ColumnName="uid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="user_auth_type">
+      <EntityTypeMapping TypeName="stemModel.user_auth_type">
+        <MappingFragment StoreEntitySet="user_auth_type">
+          <ScalarProperty Name="icon" ColumnName="icon" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="language_type">
+      <EntityTypeMapping TypeName="stemModel.language_type">
+        <MappingFragment StoreEntitySet="language_type">
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="num" ColumnName="num" />
+          <ScalarProperty Name="shunxu" ColumnName="shunxu" />
+          <ScalarProperty Name="beizhu" ColumnName="beizhu" />
+          <ScalarProperty Name="is_soft" ColumnName="is_soft" />
+          <ScalarProperty Name="icon" ColumnName="icon" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="lesson">
+      <EntityTypeMapping TypeName="stemModel.lesson">
+        <MappingFragment StoreEntitySet="lesson">
+          <ScalarProperty Name="month_num" ColumnName="month_num" />
+          <ScalarProperty Name="content" ColumnName="content" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="num" ColumnName="num" />
+          <ScalarProperty Name="teachers" ColumnName="teachers" />
+          <ScalarProperty Name="shop_id" ColumnName="shop_id" />
+          <ScalarProperty Name="is_xilie" ColumnName="is_xilie" />
+          <ScalarProperty Name="jigou" ColumnName="jigou" />
+          <ScalarProperty Name="tag" ColumnName="tag" />
+          <ScalarProperty Name="age_max" ColumnName="age_max" />
+          <ScalarProperty Name="age_min" ColumnName="age_min" />
+          <ScalarProperty Name="last_change_date" ColumnName="last_change_date" />
+          <ScalarProperty Name="ins_date" ColumnName="ins_date" />
+          <ScalarProperty Name="uid" ColumnName="uid" />
+          <ScalarProperty Name="image" ColumnName="image" />
+          <ScalarProperty Name="language_id" ColumnName="language_id" />
+          <ScalarProperty Name="desc" ColumnName="desc" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="product_status">
+      <EntityTypeMapping TypeName="stemModel.product_status">
+        <MappingFragment StoreEntitySet="product_status">
+          <ScalarProperty Name="orderby" ColumnName="orderby" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="product_type">
+      <EntityTypeMapping TypeName="stemModel.product_type">
+        <MappingFragment StoreEntitySet="product_type">
+          <ScalarProperty Name="orderby" ColumnName="orderby" />
+          <ScalarProperty Name="icon" ColumnName="icon" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="shop">
+      <EntityTypeMapping TypeName="stemModel.shop">
+        <MappingFragment StoreEntitySet="shop">
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="change_date" ColumnName="change_date" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="banner" ColumnName="banner" />
+          <ScalarProperty Name="logo" ColumnName="logo" />
+          <ScalarProperty Name="jianjie" ColumnName="jianjie" />
+          <ScalarProperty Name="ins_date" ColumnName="ins_date" />
+          <ScalarProperty Name="fuzeren_uid" ColumnName="fuzeren_uid" />
+          <ScalarProperty Name="card" ColumnName="card" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="lessson_collect">
+      <EntityTypeMapping TypeName="stemModel.lessson_collect">
+        <MappingFragment StoreEntitySet="lessson_collect">
+          <ScalarProperty Name="is_zan" ColumnName="is_zan" />
+          <ScalarProperty Name="qu_date" ColumnName="qu_date" />
+          <ScalarProperty Name="ins_date" ColumnName="ins_date" />
+          <ScalarProperty Name="uid" ColumnName="uid" />
+          <ScalarProperty Name="lessonid" ColumnName="lessonid" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="product_collect">
+      <EntityTypeMapping TypeName="stemModel.product_collect">
+        <MappingFragment StoreEntitySet="product_collect">
+          <ScalarProperty Name="is_zan" ColumnName="is_zan" />
+          <ScalarProperty Name="qu_date" ColumnName="qu_date" />
+          <ScalarProperty Name="ins_date" ColumnName="ins_date" />
+          <ScalarProperty Name="uid" ColumnName="uid" />
+          <ScalarProperty Name="product_id" ColumnName="product_id" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="product_comment">
+      <EntityTypeMapping TypeName="stemModel.product_comment">
+        <MappingFragment StoreEntitySet="product_comment">
+          <ScalarProperty Name="imglist" ColumnName="imglist" />
+          <ScalarProperty Name="desc" ColumnName="desc" />
+          <ScalarProperty Name="third_star" ColumnName="third_star" />
+          <ScalarProperty Name="second_star" ColumnName="second_star" />
+          <ScalarProperty Name="first_star" ColumnName="first_star" />
+          <ScalarProperty Name="pre_id" ColumnName="pre_id" />
+          <ScalarProperty Name="toid" ColumnName="toid" />
+          <ScalarProperty Name="order_id" ColumnName="order_id" />
+          <ScalarProperty Name="ins_date" ColumnName="ins_date" />
+          <ScalarProperty Name="is_niming" ColumnName="is_niming" />
+          <ScalarProperty Name="uid" ColumnName="uid" />
+          <ScalarProperty Name="product_id" ColumnName="product_id" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="product_size">
+      <EntityTypeMapping TypeName="stemModel.product_size">
+        <MappingFragment StoreEntitySet="product_size">
+          <ScalarProperty Name="sale_num" ColumnName="sale_num" />
+          <ScalarProperty Name="num" ColumnName="num" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="image" ColumnName="image" />
+          <ScalarProperty Name="beizhu" ColumnName="beizhu" />
+          <ScalarProperty Name="ins_date" ColumnName="ins_date" />
+          <ScalarProperty Name="product_id" ColumnName="product_id" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="order">
+      <EntityTypeMapping TypeName="stemModel.order">
+        <MappingFragment StoreEntitySet="order">
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+          <ScalarProperty Name="params" ColumnName="params" />
+          <ScalarProperty Name="pay_type" ColumnName="pay_type" />
+          <ScalarProperty Name="use_time" ColumnName="use_time" />
+          <ScalarProperty Name="pay_time" ColumnName="pay_time" />
+          <ScalarProperty Name="products" ColumnName="products" />
+          <ScalarProperty Name="ip" ColumnName="ip" />
+          <ScalarProperty Name="express" ColumnName="express" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="insert_time" ColumnName="insert_time" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="uid" ColumnName="uid" />
+          <ScalarProperty Name="shop_id" ColumnName="shop_id" />
+          <ScalarProperty Name="shop_name" ColumnName="shop_name" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="orderid" ColumnName="orderid" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="order_every_status">
+      <EntityTypeMapping TypeName="stemModel.order_every_status">
+        <MappingFragment StoreEntitySet="order_every_status">
+          <ScalarProperty Name="desc" ColumnName="desc" />
+          <ScalarProperty Name="ins_date" ColumnName="ins_date" />
+          <ScalarProperty Name="orderid" ColumnName="orderid" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="order_status">
+      <EntityTypeMapping TypeName="stemModel.order_status">
+        <MappingFragment StoreEntitySet="order_status">
+          <ScalarProperty Name="orderby" ColumnName="orderby" />
+          <ScalarProperty Name="icon" ColumnName="icon" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="product_shop_category">
+      <EntityTypeMapping TypeName="stemModel.product_shop_category">
+        <MappingFragment StoreEntitySet="product_shop_category">
+          <ScalarProperty Name="ins_date" ColumnName="ins_date" />
+          <ScalarProperty Name="orderby" ColumnName="orderby" />
+          <ScalarProperty Name="uid" ColumnName="uid" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="pre_id" ColumnName="pre_id" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="system_banner">
+      <EntityTypeMapping TypeName="stemModel.system_banner">
+        <MappingFragment StoreEntitySet="system_banner">
+          <ScalarProperty Name="kw" ColumnName="kw" />
+          <ScalarProperty Name="color" ColumnName="color" />
+          <ScalarProperty Name="orderby" ColumnName="orderby" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="ins_date" ColumnName="ins_date" />
+          <ScalarProperty Name="image" ColumnName="image" />
+          <ScalarProperty Name="url" ColumnName="url" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="lessons_menu">
+      <EntityTypeMapping TypeName="stemModel.lessons_menu">
+        <MappingFragment StoreEntitySet="lessons_menu">
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="time" ColumnName="time" />
+          <ScalarProperty Name="product_id" ColumnName="product_id" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="is_free" ColumnName="is_free" />
+          <ScalarProperty Name="ins_date" ColumnName="ins_date" />
+          <ScalarProperty Name="orderby" ColumnName="orderby" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="pre_id" ColumnName="pre_id" />
+          <ScalarProperty Name="lesson_id" ColumnName="lesson_id" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="shop_status">
+      <EntityTypeMapping TypeName="stemModel.shop_status">
+        <MappingFragment StoreEntitySet="shop_status">
+          <ScalarProperty Name="icon" ColumnName="icon" />
+          <ScalarProperty Name="orderby" ColumnName="orderby" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="shop_teachers">
+      <EntityTypeMapping TypeName="stemModel.shop_teachers">
+        <MappingFragment StoreEntitySet="shop_teachers">
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="card1" ColumnName="card1" />
+          <ScalarProperty Name="card" ColumnName="card" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="shop_id" ColumnName="shop_id" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="avator" ColumnName="avator" />
+          <ScalarProperty Name="jianjie" ColumnName="jianjie" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="shop_type">
+      <EntityTypeMapping TypeName="stemModel.shop_type">
+        <MappingFragment StoreEntitySet="shop_type">
+          <ScalarProperty Name="orderby" ColumnName="orderby" />
+          <ScalarProperty Name="icon" ColumnName="icon" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="lesson_video">
+      <EntityTypeMapping TypeName="stemModel.lesson_video">
+        <MappingFragment StoreEntitySet="lesson_video">
+          <ScalarProperty Name="shop" ColumnName="shop" />
+          <ScalarProperty Name="size" ColumnName="size" />
+          <ScalarProperty Name="ins_date" ColumnName="ins_date" />
+          <ScalarProperty Name="url" ColumnName="url" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="uid" ColumnName="uid" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="shops_teachers">
+      <EntityTypeMapping TypeName="stemModel.shops_teachers">
+        <MappingFragment StoreEntitySet="shops_teachers">
+          <ScalarProperty Name="zmcard" ColumnName="zmcard" />
+          <ScalarProperty Name="image" ColumnName="image" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="desc" ColumnName="desc" />
+          <ScalarProperty Name="school" ColumnName="school" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="birth" ColumnName="birth" />
+          <ScalarProperty Name="ins_date" ColumnName="ins_date" />
+          <ScalarProperty Name="shop_id" ColumnName="shop_id" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="lesson_comment">
+      <EntityTypeMapping TypeName="stemModel.lesson_comment">
+        <MappingFragment StoreEntitySet="lesson_comment">
+          <ScalarProperty Name="toname" ColumnName="toname" />
+          <ScalarProperty Name="uname" ColumnName="uname" />
+          <ScalarProperty Name="third_star" ColumnName="third_star" />
+          <ScalarProperty Name="second_star" ColumnName="second_star" />
+          <ScalarProperty Name="first_star" ColumnName="first_star" />
+          <ScalarProperty Name="ins_date" ColumnName="ins_date" />
+          <ScalarProperty Name="toid" ColumnName="toid" />
+          <ScalarProperty Name="order_id" ColumnName="order_id" />
+          <ScalarProperty Name="pre_id" ColumnName="pre_id" />
+          <ScalarProperty Name="lesson_id" ColumnName="lesson_id" />
+          <ScalarProperty Name="uid" ColumnName="uid" />
+          <ScalarProperty Name="is_niming" ColumnName="is_niming" />
+          <ScalarProperty Name="imglist" ColumnName="imglist" />
+          <ScalarProperty Name="desc" ColumnName="desc" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="shops_banners">
+      <EntityTypeMapping TypeName="stemModel.shops_banners">
+        <MappingFragment StoreEntitySet="shops_banners">
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="shop_id" ColumnName="shop_id" />
+          <ScalarProperty Name="orderby" ColumnName="orderby" />
+          <ScalarProperty Name="url" ColumnName="url" />
+          <ScalarProperty Name="image" ColumnName="image" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="shops_citys">
+      <EntityTypeMapping TypeName="stemModel.shops_citys">
+        <MappingFragment StoreEntitySet="shops_citys">
+          <ScalarProperty Name="shop_id" ColumnName="shop_id" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="avator" ColumnName="avator" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="lng" ColumnName="lng" />
+          <ScalarProperty Name="lat" ColumnName="lat" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="product">
+      <EntityTypeMapping TypeName="stemModel.product">
+        <MappingFragment StoreEntitySet="product">
+          <ScalarProperty Name="guanlian_product" ColumnName="guanlian_product" />
+          <ScalarProperty Name="phone_detail" ColumnName="phone_detail" />
+          <ScalarProperty Name="computer_detail" ColumnName="computer_detail" />
+          <ScalarProperty Name="imglist" ColumnName="imglist" />
+          <ScalarProperty Name="lessonid" ColumnName="lessonid" />
+          <ScalarProperty Name="spcode" ColumnName="spcode" />
+          <ScalarProperty Name="sale_num" ColumnName="sale_num" />
+          <ScalarProperty Name="orderby" ColumnName="orderby" />
+          <ScalarProperty Name="num" ColumnName="num" />
+          <ScalarProperty Name="is_free" ColumnName="is_free" />
+          <ScalarProperty Name="endtime" ColumnName="endtime" />
+          <ScalarProperty Name="starttime" ColumnName="starttime" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="codezip" ColumnName="codezip" />
+          <ScalarProperty Name="pdf" ColumnName="pdf" />
+          <ScalarProperty Name="video" ColumnName="video" />
+          <ScalarProperty Name="image" ColumnName="image" />
+          <ScalarProperty Name="old_max" ColumnName="old_max" />
+          <ScalarProperty Name="old_mini" ColumnName="old_mini" />
+          <ScalarProperty Name="ins_date" ColumnName="ins_date" />
+          <ScalarProperty Name="language_type" ColumnName="language_type" />
+          <ScalarProperty Name="uid" ColumnName="uid" />
+          <ScalarProperty Name="sub_title" ColumnName="sub_title" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="chat_list">
+      <EntityTypeMapping TypeName="stemModel.chat_list">
+        <MappingFragment StoreEntitySet="chat_list">
+          <ScalarProperty Name="last_time" ColumnName="last_time" />
+          <ScalarProperty Name="is_show" ColumnName="is_show" />
+          <ScalarProperty Name="no_read_num" ColumnName="no_read_num" />
+          <ScalarProperty Name="uid" ColumnName="uid" />
+          <ScalarProperty Name="toid" ColumnName="toid" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="chat_msg">
+      <EntityTypeMapping TypeName="stemModel.chat_msg">
+        <MappingFragment StoreEntitySet="chat_msg">
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="is_show" ColumnName="is_show" />
+          <ScalarProperty Name="is_read" ColumnName="is_read" />
+          <ScalarProperty Name="ins_date" ColumnName="ins_date" />
+          <ScalarProperty Name="msg" ColumnName="msg" />
+          <ScalarProperty Name="toid" ColumnName="toid" />
+          <ScalarProperty Name="uid" ColumnName="uid" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="lesson_copy">
+      <EntityTypeMapping TypeName="stemModel.lesson_copy">
+        <MappingFragment StoreEntitySet="lesson_copy">
+          <ScalarProperty Name="month_num" ColumnName="month_num" />
+          <ScalarProperty Name="content" ColumnName="content" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="num" ColumnName="num" />
+          <ScalarProperty Name="teachers" ColumnName="teachers" />
+          <ScalarProperty Name="shop_id" ColumnName="shop_id" />
+          <ScalarProperty Name="is_xilie" ColumnName="is_xilie" />
+          <ScalarProperty Name="jigou" ColumnName="jigou" />
+          <ScalarProperty Name="tag" ColumnName="tag" />
+          <ScalarProperty Name="age_max" ColumnName="age_max" />
+          <ScalarProperty Name="age_min" ColumnName="age_min" />
+          <ScalarProperty Name="last_change_date" ColumnName="last_change_date" />
+          <ScalarProperty Name="ins_date" ColumnName="ins_date" />
+          <ScalarProperty Name="uid" ColumnName="uid" />
+          <ScalarProperty Name="image" ColumnName="image" />
+          <ScalarProperty Name="language_id" ColumnName="language_id" />
+          <ScalarProperty Name="desc" ColumnName="desc" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="lesson_user">
+      <EntityTypeMapping TypeName="stemModel.lesson_user">
+        <MappingFragment StoreEntitySet="lesson_user">
+          <ScalarProperty Name="records" ColumnName="records" />
+          <ScalarProperty Name="is_study" ColumnName="is_study" />
+          <ScalarProperty Name="ins_date" ColumnName="ins_date" />
+          <ScalarProperty Name="uid" ColumnName="uid" />
+          <ScalarProperty Name="lessonid" ColumnName="lessonid" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
